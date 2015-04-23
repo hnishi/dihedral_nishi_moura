@@ -13,7 +13,7 @@ set yrange[-180:180]
 set ytics 45
 #set grid
 
-set size square
+#set size square
 #set size ratio 1 1
 #set rmargin 2
 #set lmargin 2
