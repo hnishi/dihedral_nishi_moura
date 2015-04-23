@@ -7,10 +7,10 @@ set title "Pseudo-dihedral Plot of Residue 210___STARTRES___222"
 set xlabel "Time"
 set ylabel "Dihedral Angle"
 
-set xrange[-180:180]
-#set yrange[-180:180]
-set xtics 45
-#set ytics 45
+#set xrange[-180:180]
+set yrange[-180:180]
+#set xtics 45
+set ytics 45
 #set grid
 
 set size square
