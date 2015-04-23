@@ -63,7 +63,7 @@ int dihedralnishi( Inp_nishi inp1 ){
   buf5 = search_sel( *tra1->pdb1, startchain, startres +1, "N", selatom);
   
   Vector3f r1, r2, r3, r4, r5; // initial value is (1, 0, 0)
-  for( unsigned int n = startframe; n < tra1->total_step; n++){
+/*  for( unsigned int n = startframe; n < tra1->total_step; n++){
 
     //cout<<"search_sel( "<< startchain<<" "<<startres -1 <<" C"<<selatom<<"\n";
     //cout<<"buf1 = "<<buf1<<endl;
@@ -73,12 +73,6 @@ int dihedralnishi( Inp_nishi inp1 ){
     r4 << tra1->cordx[n*tra1->total_sel+buf4], tra1->cordy[n*tra1->total_sel+buf4], tra1->cordz[n*tra1->total_sel+buf4];
     r5 << tra1->cordx[n*tra1->total_sel+buf5], tra1->cordy[n*tra1->total_sel+buf5], tra1->cordz[n*tra1->total_sel+buf5];
 
-    //vec1 << 1.0, 1.0, 1.0;
-    /*r1 << 12.875,1.334,-17.76; 
-    r2 << 11.472,1.216,-15.718;  
-    r3 << 10.363,0.806,-14.818;  
-    r4 << 8.968,1.319,-15.257 ;
-    */
     //float dih = dihedral_4(r1,r2,r3,r4);
     phi.push_back( dihedral_4(r1,r2,r3,r4) );
     psi.push_back( dihedral_4(r2,r3,r4,r5) );
@@ -86,9 +80,10 @@ int dihedralnishi( Inp_nishi inp1 ){
     //cout<<"dih = "<<dih<<endl;
 
   }
+*/
 /*  calculate dihedral of reference pdb file and cout 
 */
-  cout<<"calculate dihedral of reference pdb file and cout \n";
+/*  cout<<"calculate dihedral of reference pdb file and cout \n";
   cout<<"please put these dihedral angles into output-file, if you want to see them in the same time.\n";
   buf1 = search_sel( *tra1->pdb1, startchain, startres -1, "C", "all");
   buf2 = search_sel( *tra1->pdb1, startchain, startres, "N", "all");
@@ -102,9 +97,10 @@ int dihedralnishi( Inp_nishi inp1 ){
   r5 << tra1->pdb1->coox[buf5], tra1->pdb1->cooy[buf5], tra1->pdb1->cooz[buf5];
   cout<<"phi psi \n";
   cout<<dihedral_4(r1,r2,r3,r4)<<" "<<dihedral_4(r2,r3,r4,r5)<<endl;
+*/
 /*  output file
 */
-  string outfile = inp1.read("OUTFILE").c_str();
+/*  string outfile = inp1.read("OUTFILE").c_str();
   ofstream ofs;
   ofs.open( outfile.c_str() );
   int frame = tra1->total_step - startframe;
@@ -113,7 +109,7 @@ int dihedralnishi( Inp_nishi inp1 ){
   }
   ofs.close();
   cout<<"output "<<outfile<<" (for graph) \n";
-
+*/
 // ############# CALCULATE phi psi moura ########################################
 /* (x) moura  
  * 210-222 all ca 

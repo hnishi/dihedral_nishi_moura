@@ -21,4 +21,11 @@ STARTCHAIN  B  # space; white space " " can be set using keyword "space"
 STARTRES  __STARTRES__   # 210-222
 SELATOM all  
 
+# moura
+RES1  210 
+RES2  __RES2__
+RES3  __RES3__
+RES4  222 
+OUTFILE2 __OUTFILE__
+
 
