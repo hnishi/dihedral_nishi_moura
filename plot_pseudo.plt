@@ -21,6 +21,6 @@ set ytics 45
 #set bmargin 2
 
 #plot "out_dih.dat"
-plot "__STARTRES__.dat" w l
+plot "__STARTRES__.dat" #w l #with lines should be not used for angles
 
 #pause -1
